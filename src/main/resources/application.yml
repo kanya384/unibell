@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: clients
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clients
+    username: postgres
+    password: password
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/master.yaml
